@@ -1,6 +1,12 @@
 name: projeto_multiplataformas_flutter
 description: A new Flutter project.
 
+scripts:
+  mobx:
+    mobx_single: "flutter pub run build_runner build"
+    mobx_watch: "flutter pub run build_runner watch"
+    mobx_resolve_conflicts: "flutter pub run build_runner watch --delete-conflicting-outputs"
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -36,6 +42,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  mobx: ^2.1.3
+  flutter_mobx: ^2.0.6+5
+  
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +56,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  mobx_codegen: ^2.1.1
+  build_runner: ^2.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
